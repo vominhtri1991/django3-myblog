@@ -38,6 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_blog',
+    'ckeditor',
+    'ckeditor_uploader',
+
+
+
+   
+   
 ]
 
 MIDDLEWARE = [
@@ -78,6 +85,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'myblog',
+        #'USER': 'myblog',
+        #'PASSWORD': "Myblog@999",
+        #'HOST': "192.168.9.99",
     }
 }
 
@@ -119,3 +131,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+SITE_ID = 1
+ 
+####################################
+    ##  CKEDITOR CONFIGURATION ##
+####################################
+ 
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+ 
+CKEDITOR_UPLOAD_PATH = ''
+CKEDITOR_IMAGE_BACKEND = "pillow"
+ 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
+ 

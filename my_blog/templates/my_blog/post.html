@@ -52,8 +52,13 @@
             <span class="meta">Posted by
               <a href="#">vmt1991</a>
               on {{ blog.date|date:'d M Y' }}</span>
-          </div>
+ <div class="badge badge-primary text-wrap" style="width: 6rem;">
+          {{ blog.get_type_blog_display }}
         </div>
+          </div>
+         
+        </div>
+
       </div>
     </div>
   </header>
@@ -62,8 +67,9 @@
   <article>
     <div class="container">
       <div class="row">
+        
         <div class="col-lg-8 col-md-10 mx-auto">
-          {{ blog.content|safe }}         
+          {{ blog.new_content|safe }}         
 
         </div>
       </div>
